@@ -1,13 +1,17 @@
-import tccApi from "./tccApi.js"
+import api from "./api.js"
 
-export const status = () => {
-    tccApi.get('/status/');
+export const status = async () => {
+    const response = api.get('/status/');
+    return response.data
 }
 
-export const getTopTracks = (token, range, limit) => {
-    tccApi.get('/tracks/', { token: token, range: range, limit: limit});
+export const getTopTracks = async (data) => {
+    console.log(data)
+    const response = api.get('/tracks/', {data});
+    return response.data
 }
 
-export const getTopArtists = (token, range, limit) => {
-    tccApi.get('/artists/', { token: token, range: range, limit: limit});
+export const getTopArtists = async (data) => {
+    const response = api.get('/artists/', {data});
+    return response.data
 }
