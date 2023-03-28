@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import { getTopTracks } from "../../services/top";
+import { getTopTracks } from "../../services/api";
 
 function Login() {
 
@@ -7,6 +7,7 @@ function Login() {
     const REDIRECT_URI='http://localhost:3000'
     const AUTH_ENDPOINT='https://accounts.spotify.com/authorize'
     const RESPONSE_TYPE='token'
+    const SCOPES=['user-top-read']
 
     const [token, setToken] = useState("")
     const [tracks, setTracks] = useState([])
@@ -43,7 +44,7 @@ function Login() {
     return (
         <div className="login">
             {!token ?
-                <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}>Login
+                <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${SCOPES.join("%20")}&response_type=${RESPONSE_TYPE}`}>Login
                     to Spotify</a>
                 : <button onClick={logout}>Logout</button>}
         </div>
