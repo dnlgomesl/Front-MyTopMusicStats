@@ -1,0 +1,23 @@
+.item-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .item-list li {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .item-list li img {
+    margin-right: 1rem;
+    max-width: 100%;
+  }
+  
+  .item-list li div {
+    flex: 1;
+  }
