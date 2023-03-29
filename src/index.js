@@ -2,11 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './app/App'
-import Login from './app/components/Login/Login';
-import ItemList from './app/components/ItemList/ItemList';
+import TrackList from './app/components/TrackList/TrackList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const items = [
+const tracks = [
   {
     "music": "Scene Five: Through Her Eyes",
     "artist": "Dream Theater",
@@ -251,6 +250,6 @@ const items = [
 root.render(
   <React.StrictMode>
     <App />
-    <ItemList items={items}/>
+    <TrackList tracks={tracks}/>
   </React.StrictMode>
 );
