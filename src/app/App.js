@@ -1,9 +1,5 @@
 function App() {
-  return (
-    <div className="App">
-      <h2>TCC</h2>
-    </div>
-  );
+  return
 }
 
 export default App;

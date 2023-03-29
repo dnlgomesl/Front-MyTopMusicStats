@@ -251,7 +251,6 @@ const items = [
 root.render(
   <React.StrictMode>
     <App />
-    <Login />
     <ItemList items={items}/>
   </React.StrictMode>
 );
