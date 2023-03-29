@@ -2,254 +2,265 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './app/App'
-import TrackList from './app/components/TrackList/TrackList';
+import ArtistList from './app/components/ArtistList/ArtistList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const tracks = [
+const artists =  [
   {
-    "music": "Scene Five: Through Her Eyes",
     "artist": "Dream Theater",
-    "album": "Metropolis, Pt. 2: Scenes from a Memory",
+    "genres": [
+      "neo classical metal",
+      "progressive metal"
+    ],
     "images": [
       {
         "height": 640,
-        "url": "https://i.scdn.co/image/ab67616d0000b273dbb83b10ff18df1213b76ac5",
+        "url": "https://i.scdn.co/image/ab6761610000e5eb881f3d1db94c120edca60a65",
         "width": 640
       },
       {
-        "height": 300,
-        "url": "https://i.scdn.co/image/ab67616d00001e02dbb83b10ff18df1213b76ac5",
-        "width": 300
+        "height": 320,
+        "url": "https://i.scdn.co/image/ab67616100005174881f3d1db94c120edca60a65",
+        "width": 320
       },
       {
-        "height": 64,
-        "url": "https://i.scdn.co/image/ab67616d00004851dbb83b10ff18df1213b76ac5",
-        "width": 64
+        "height": 160,
+        "url": "https://i.scdn.co/image/ab6761610000f178881f3d1db94c120edca60a65",
+        "width": 160
       }
     ],
-    "popularity": 47,
-    "duration": 5.29
+    "popularity": 62
   },
   {
-    "music": "Endless Sacrifice",
-    "artist": "Dream Theater",
-    "album": "Train of Thought",
-    "images": [
-      {
-        "height": 640,
-        "url": "https://i.scdn.co/image/ab67616d0000b2738824ff57d5ffe2ca803c8a57",
-        "width": 640
-      },
-      {
-        "height": 300,
-        "url": "https://i.scdn.co/image/ab67616d00001e028824ff57d5ffe2ca803c8a57",
-        "width": 300
-      },
-      {
-        "height": 64,
-        "url": "https://i.scdn.co/image/ab67616d000048518824ff57d5ffe2ca803c8a57",
-        "width": 64
-      }
-    ],
-    "popularity": 43,
-    "duration": 11.23
-  },
-  {
-    "music": "Deixar o Barco Ir",
-    "artist": "Dani Black",
-    "album": "Dani Black",
-    "images": [
-      {
-        "height": 640,
-        "url": "https://i.scdn.co/image/ab67616d0000b2736344c0169282abac040cbd3d",
-        "width": 640
-      },
-      {
-        "height": 300,
-        "url": "https://i.scdn.co/image/ab67616d00001e026344c0169282abac040cbd3d",
-        "width": 300
-      },
-      {
-        "height": 64,
-        "url": "https://i.scdn.co/image/ab67616d000048516344c0169282abac040cbd3d",
-        "width": 64
-      }
-    ],
-    "popularity": 20,
-    "duration": 3.21
-  },
-  {
-    "music": "Descanso",
-    "artist": "Oficina G3",
-    "album": "Histórias e Bicicletas",
-    "images": [
-      {
-        "height": 640,
-        "url": "https://i.scdn.co/image/ab67616d0000b2735bc4c034d9fa29daa6ec74e9",
-        "width": 640
-      },
-      {
-        "height": 300,
-        "url": "https://i.scdn.co/image/ab67616d00001e025bc4c034d9fa29daa6ec74e9",
-        "width": 300
-      },
-      {
-        "height": 64,
-        "url": "https://i.scdn.co/image/ab67616d000048515bc4c034d9fa29daa6ec74e9",
-        "width": 64
-      }
-    ],
-    "popularity": 45,
-    "duration": 5.17
-  },
-  {
-    "music": "The Count of Tuscany",
-    "artist": "Dream Theater",
-    "album": "Black Clouds & Silver Linings",
-    "images": [
-      {
-        "height": 640,
-        "url": "https://i.scdn.co/image/ab67616d0000b2735fa53cb7507e4c55178ead5a",
-        "width": 640
-      },
-      {
-        "height": 300,
-        "url": "https://i.scdn.co/image/ab67616d00001e025fa53cb7507e4c55178ead5a",
-        "width": 300
-      },
-      {
-        "height": 64,
-        "url": "https://i.scdn.co/image/ab67616d000048515fa53cb7507e4c55178ead5a",
-        "width": 64
-      }
-    ],
-    "popularity": 43,
-    "duration": 19.17
-  },
-  {
-    "music": "Pull Me Under",
-    "artist": "Dream Theater",
-    "album": "Images and Words",
-    "images": [
-      {
-        "height": 640,
-        "url": "https://i.scdn.co/image/ab67616d0000b273f4d11b78efa76496f2acd618",
-        "width": 640
-      },
-      {
-        "height": 300,
-        "url": "https://i.scdn.co/image/ab67616d00001e02f4d11b78efa76496f2acd618",
-        "width": 300
-      },
-      {
-        "height": 64,
-        "url": "https://i.scdn.co/image/ab67616d00004851f4d11b78efa76496f2acd618",
-        "width": 64
-      }
-    ],
-    "popularity": 61,
-    "duration": 8.13
-  },
-  {
-    "music": "Lágrimas em Poças",
-    "artist": "Duzz",
-    "album": "Lágrimas em Poças",
-    "images": [
-      {
-        "height": 640,
-        "url": "https://i.scdn.co/image/ab67616d0000b2730c49f33be5aada655d551b8c",
-        "width": 640
-      },
-      {
-        "height": 300,
-        "url": "https://i.scdn.co/image/ab67616d00001e020c49f33be5aada655d551b8c",
-        "width": 300
-      },
-      {
-        "height": 64,
-        "url": "https://i.scdn.co/image/ab67616d000048510c49f33be5aada655d551b8c",
-        "width": 64
-      }
-    ],
-    "popularity": 38,
-    "duration": 3.25
-  },
-  {
-    "music": "O Último Cristão",
-    "artist": "Kivitz",
-    "album": "Casa ≠ Lar",
-    "images": [
-      {
-        "height": 640,
-        "url": "https://i.scdn.co/image/ab67616d0000b273da760424751bd2a8f1057f05",
-        "width": 640
-      },
-      {
-        "height": 300,
-        "url": "https://i.scdn.co/image/ab67616d00001e02da760424751bd2a8f1057f05",
-        "width": 300
-      },
-      {
-        "height": 64,
-        "url": "https://i.scdn.co/image/ab67616d00004851da760424751bd2a8f1057f05",
-        "width": 64
-      }
-    ],
-    "popularity": 21,
-    "duration": 3.29
-  },
-  {
-    "music": "Quem é Essa?",
     "artist": "Rodolfo Abrantes",
-    "album": "Joio ou Trigo",
+    "genres": [
+      "adoracao",
+      "brazilian gospel",
+      "rock gospel brasileiro"
+    ],
     "images": [
       {
         "height": 640,
-        "url": "https://i.scdn.co/image/ab67616d0000b2731f0b6e23a3d0bd25f08b7aab",
+        "url": "https://i.scdn.co/image/ab6761610000e5ebe3373f879acf46f60aff941e",
         "width": 640
       },
       {
-        "height": 300,
-        "url": "https://i.scdn.co/image/ab67616d00001e021f0b6e23a3d0bd25f08b7aab",
-        "width": 300
+        "height": 320,
+        "url": "https://i.scdn.co/image/ab67616100005174e3373f879acf46f60aff941e",
+        "width": 320
       },
       {
-        "height": 64,
-        "url": "https://i.scdn.co/image/ab67616d000048511f0b6e23a3d0bd25f08b7aab",
-        "width": 64
+        "height": 160,
+        "url": "https://i.scdn.co/image/ab6761610000f178e3373f879acf46f60aff941e",
+        "width": 160
       }
     ],
-    "popularity": 33,
-    "duration": 5.34
+    "popularity": 53
   },
   {
-    "music": "The Zephyr Song",
-    "artist": "Red Hot Chili Peppers",
-    "album": "By the Way (Deluxe Edition)",
+    "artist": "John Mayer",
+    "genres": [
+      "neo mellow",
+      "singer-songwriter"
+    ],
     "images": [
       {
         "height": 640,
-        "url": "https://i.scdn.co/image/ab67616d0000b273de1af2785a83cc660155a0c4",
+        "url": "https://i.scdn.co/image/ab6761610000e5ebe926dd683e1700a6d65bd835",
         "width": 640
       },
       {
-        "height": 300,
-        "url": "https://i.scdn.co/image/ab67616d00001e02de1af2785a83cc660155a0c4",
-        "width": 300
+        "height": 320,
+        "url": "https://i.scdn.co/image/ab67616100005174e926dd683e1700a6d65bd835",
+        "width": 320
       },
       {
-        "height": 64,
-        "url": "https://i.scdn.co/image/ab67616d00004851de1af2785a83cc660155a0c4",
-        "width": 64
+        "height": 160,
+        "url": "https://i.scdn.co/image/ab6761610000f178e926dd683e1700a6d65bd835",
+        "width": 160
       }
     ],
-    "popularity": 71,
-    "duration": 3.51
+    "popularity": 80
+  },
+  {
+    "artist": "Duzz",
+    "genres": [
+      "brazilian hip hop"
+    ],
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab6761610000e5eb8181813a737ce8cfa66ef575",
+        "width": 640
+      },
+      {
+        "height": 320,
+        "url": "https://i.scdn.co/image/ab676161000051748181813a737ce8cfa66ef575",
+        "width": 320
+      },
+      {
+        "height": 160,
+        "url": "https://i.scdn.co/image/ab6761610000f1788181813a737ce8cfa66ef575",
+        "width": 160
+      }
+    ],
+    "popularity": 59
+  },
+  {
+    "artist": "NX Zero",
+    "genres": [
+      "brazilian emo",
+      "brazilian rock",
+      "pop rock brasileiro",
+      "rock alternativo brasileiro"
+    ],
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab6761610000e5eb9f26cb33eabb598942820a7b",
+        "width": 640
+      },
+      {
+        "height": 320,
+        "url": "https://i.scdn.co/image/ab676161000051749f26cb33eabb598942820a7b",
+        "width": 320
+      },
+      {
+        "height": 160,
+        "url": "https://i.scdn.co/image/ab6761610000f1789f26cb33eabb598942820a7b",
+        "width": 160
+      }
+    ],
+    "popularity": 61
+  },
+  {
+    "artist": "CantoVerbo",
+    "genres": [
+      "adoracao"
+    ],
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab6761610000e5eb71540892bc8b2c3e9a091561",
+        "width": 640
+      },
+      {
+        "height": 320,
+        "url": "https://i.scdn.co/image/ab6761610000517471540892bc8b2c3e9a091561",
+        "width": 320
+      },
+      {
+        "height": 160,
+        "url": "https://i.scdn.co/image/ab6761610000f17871540892bc8b2c3e9a091561",
+        "width": 160
+      }
+    ],
+    "popularity": 34
+  },
+  {
+    "artist": "Graça",
+    "genres": [
+      "indie cristao"
+    ],
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab6761610000e5eb756e197ee27680603a77c99c",
+        "width": 640
+      },
+      {
+        "height": 320,
+        "url": "https://i.scdn.co/image/ab67616100005174756e197ee27680603a77c99c",
+        "width": 320
+      },
+      {
+        "height": 160,
+        "url": "https://i.scdn.co/image/ab6761610000f178756e197ee27680603a77c99c",
+        "width": 160
+      }
+    ],
+    "popularity": 6
+  },
+  {
+    "artist": "Slipknot",
+    "genres": [
+      "alternative metal",
+      "nu metal",
+      "rap metal"
+    ],
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab6761610000e5ebec01c52d6030a1574070e308",
+        "width": 640
+      },
+      {
+        "height": 320,
+        "url": "https://i.scdn.co/image/ab67616100005174ec01c52d6030a1574070e308",
+        "width": 320
+      },
+      {
+        "height": 160,
+        "url": "https://i.scdn.co/image/ab6761610000f178ec01c52d6030a1574070e308",
+        "width": 160
+      }
+    ],
+    "popularity": 80
+  },
+  {
+    "artist": "UCLÃ",
+    "genres": [
+      "brazilian hip hop",
+      "funk carioca"
+    ],
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab6761610000e5ebc61a6486789a3b93226e03b7",
+        "width": 640
+      },
+      {
+        "height": 320,
+        "url": "https://i.scdn.co/image/ab67616100005174c61a6486789a3b93226e03b7",
+        "width": 320
+      },
+      {
+        "height": 160,
+        "url": "https://i.scdn.co/image/ab6761610000f178c61a6486789a3b93226e03b7",
+        "width": 160
+      }
+    ],
+    "popularity": 59
+  },
+  {
+    "artist": "Marco Telles",
+    "genres": [
+      "adoracao",
+      "indie cristao"
+    ],
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab6761610000e5ebb7ca86c1a0ab730cb29362a9",
+        "width": 640
+      },
+      {
+        "height": 320,
+        "url": "https://i.scdn.co/image/ab67616100005174b7ca86c1a0ab730cb29362a9",
+        "width": 320
+      },
+      {
+        "height": 160,
+        "url": "https://i.scdn.co/image/ab6761610000f178b7ca86c1a0ab730cb29362a9",
+        "width": 160
+      }
+    ],
+    "popularity": 48
   }
 ]
 root.render(
   <React.StrictMode>
     <App />
-    <TrackList tracks={tracks}/>
+    <ArtistList artists={artists} />
   </React.StrictMode>
 );
