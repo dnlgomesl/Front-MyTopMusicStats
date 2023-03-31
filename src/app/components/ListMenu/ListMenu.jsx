@@ -13,7 +13,7 @@ const darkTheme = createTheme({
   },
 });
 
-export default function ListMenu({options, label}) {
+function ListMenu({options, label}) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [selectedIndex, setSelectedIndex] = React.useState(1);
   const open = Boolean(anchorEl);
@@ -79,3 +79,5 @@ export default function ListMenu({options, label}) {
     </ThemeProvider>
   );
 }
+
+export default ListMenu;

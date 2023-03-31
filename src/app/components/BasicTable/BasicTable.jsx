@@ -15,7 +15,7 @@ const darkTheme = createTheme({
   },
 });
 
-export default function BasicTable({data, label}) {
+function BasicTable({data, label}) {
   return (
     <ThemeProvider theme={darkTheme}>
       <TableContainer component={Paper}>
@@ -40,3 +40,5 @@ export default function BasicTable({data, label}) {
     </ThemeProvider>
   );
 }
+
+export default BasicTable;
