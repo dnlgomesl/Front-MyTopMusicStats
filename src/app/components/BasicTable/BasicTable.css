@@ -1,4 +1,38 @@
-.tableTitle {
-    text-align: left;
+.table {
     padding: 1rem;
+    width: 900px;
+    max-height: 900px;
+    text-align: center;
+    background-color: #202120;
 }
+
+.table h2 {
+    padding-bottom: 1rem;
+    color: whitesmoke;
+}
+
+.boxes {
+    display: flex;
+    flex-direction: row;
+}
+  
+.box {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: solid 1px green;
+    align-items: center;
+    width: 300px;
+  }
+  
+.label {
+    padding: 0.3rem;
+    color: whitesmoke;
+    font-size: 1.3rem;
+  }
+  
+.value {
+    padding: 0.3rem;
+    font-size: 1.2rem;
+    color: whitesmoke;
+  }

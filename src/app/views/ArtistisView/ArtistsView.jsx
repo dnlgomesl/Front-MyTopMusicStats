@@ -1,27 +1,25 @@
 import * as React from 'react';
-import ListMenu from '../../components/ListMenu/ListMenu';
+import DoubleListMenu from '../../components/DoubleListMenu/DoubleListMenu';
+import ArtistList from '../../components/ArtistList/ArtistList'
+import BarChart from '../../components/BarChart/BarChart'
+import BasicTable from '../../components/BasicTable/BasicTable'
+import artistsApi from '../../mock/mock';
 import './ArtistsView.css'
 
 function ArtistsView(){
-    const optionsTime = [
-        '',
-        'Short',
-        'Medium',
-        'Long',
-    ]
-
-    const optionsLimit = [
-        '',
-        '10',
-        '20',
-        '50'
-    ]
-    
     return (
-        <div className='menu'>
-            <ListMenu options={optionsTime} label={'Time Range'} />
-            <ListMenu options={optionsLimit} label={'Limt'} />
+        <div className='main'>
+            <DoubleListMenu />
+            <ArtistList artists={artistsApi.top} />
+            <div className='basic-table'>
+                <BasicTable data={artistsApi.additional.popularity} label={"Esses são os dados referentes a populariade dos artistas mais ouvidos"}/>
+            </div>
+            <div className='title-bar-chart'>
+                <h2>Esses são os gêneros musicais presentes nos seus artistas mais ouvidos</h2>
+            </div>
+            <BarChart data={artistsApi.additional.genres}/>
         </div>
+
     );
 }
 
