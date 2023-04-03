@@ -10,7 +10,10 @@ function ArtistsView(){
     return (
         <div className='main'>
             <DoubleListMenu />
-            <ArtistList artists={artistsApi.top} />
+            <div className='artist-list'>
+                <h2>Esses são seus artistas mais ouvidos</h2>
+                <ArtistList artists={artistsApi.top} />
+            </div>
             <div className='basic-table'>
                 <BasicTable data={artistsApi.additional.popularity} label={"Esses são os dados referentes a populariade dos artistas mais ouvidos"}/>
             </div>

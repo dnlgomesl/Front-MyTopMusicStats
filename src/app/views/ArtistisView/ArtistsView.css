@@ -3,3 +3,13 @@
     justify-content: center;
     background-color: #202120;
 }
+
+.artist-list {
+    background-color: #202120;
+    text-align: center;
+}
+
+.artist-list h2 {
+    color: whitesmoke;
+    padding: 1rem;
+}
