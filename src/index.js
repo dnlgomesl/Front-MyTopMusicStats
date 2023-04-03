@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './app/App'
-import ArtistsView from './app/views/ArtistisView/ArtistsView'
+import TracksView from './app/views/TracksView/TracksView';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-    <ArtistsView />
+    <TracksView />
   </React.StrictMode>
 );

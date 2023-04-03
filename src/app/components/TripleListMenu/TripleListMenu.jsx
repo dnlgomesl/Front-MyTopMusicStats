@@ -1,8 +1,8 @@
 import * as React from 'react';
 import ListMenu from '../ListMenu/ListMenu';
-import './DoubleListMenu.css'
+import './TripleListMenu.css'
 
-function DoubleListMenu(){
+function TripleListMenu(){
     const optionsTime = [
         '',
         'Short',
@@ -16,16 +16,23 @@ function DoubleListMenu(){
         '20',
         '50'
     ]
+
+    const tracksOrArtists = [
+        '',
+        'Artistas',
+        'Músicas'
+    ]
     
     return (
         <div>
             <div className='menu'>
                 <ListMenu options={optionsTime} label={'Time Range'} />
                 <ListMenu options={optionsLimit} label={'Limt'} />
+                <ListMenu options={tracksOrArtists} label={'Tipo'} />
             </div>
         </div>
 
     );
 }
 
-export default DoubleListMenu;
+export default TripleListMenu;

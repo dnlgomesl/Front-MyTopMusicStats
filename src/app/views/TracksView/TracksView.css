@@ -1,0 +1,15 @@
+.basic-table{
+    display: flex;
+    justify-content: center;
+    background-color: #202120;
+}
+
+.tracks-list {
+    background-color: #202120;
+    text-align: center;
+}
+
+.tracks-list h2 {
+    color: whitesmoke;
+    padding: 1rem;
+}

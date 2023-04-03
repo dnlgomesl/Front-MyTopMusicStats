@@ -27,8 +27,9 @@ const BarChart = ({ data, title }) => {
   const chartData = generateChartData(data);
 
   const options = {
+    indexAxis: 'y',
     scales: {
-      y: {
+      x: {
         ticks: {
           stepSize: 1,
         },
