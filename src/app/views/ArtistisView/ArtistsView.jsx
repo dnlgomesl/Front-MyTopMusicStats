@@ -14,10 +14,7 @@ function ArtistsView(){
             <div className='basic-table'>
                 <BasicTable data={artistsApi.additional.popularity} label={"Esses são os dados referentes a populariade dos artistas mais ouvidos"}/>
             </div>
-            <div className='title-bar-chart'>
-                <h2>Esses são os gêneros musicais presentes nos seus artistas mais ouvidos</h2>
-            </div>
-            <BarChart data={artistsApi.additional.genres}/>
+            <BarChart data={artistsApi.additional.genres} title={"Esses são os gêneros musicais presentes nos seus artistas mais ouvidos"}/>
         </div>
 
     );
