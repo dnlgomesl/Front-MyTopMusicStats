@@ -1,0 +1,16 @@
+.chart-container {
+    background-color: #202120;
+    text-align: center;
+}
+
+.chart-container h2 {
+    margin: 0 auto;
+    color: whitesmoke;
+    padding: 1rem;
+}
+
+.chart {
+    width: 800px;
+    height: 450px;
+    margin: 0 auto;
+}

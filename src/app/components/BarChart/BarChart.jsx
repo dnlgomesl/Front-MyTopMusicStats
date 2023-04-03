@@ -1,6 +1,7 @@
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
 import { Chart, registerables} from 'chart.js';
+import './BarChart.css'
 
 Chart.register(...registerables);
 
@@ -14,8 +15,8 @@ const generateChartData = (data) => {
       {
         label: '',
         data: values,
-        backgroundColor: 'rgba(75,192,192,0.4)',
-        borderColor: 'rgba(75,192,192,1)',
+        backgroundColor: 'rgba(118, 184, 97, 0.6)',
+        borderColor: 'rgba(118, 184, 97, 1)',
         borderWidth: 1,
       },
     ],
@@ -46,12 +47,11 @@ const BarChart = ({ data, title }) => {
   };
 
   return (
-    <div>
+    <div className="chart-container">
       <h2>{title}</h2>
-      <Bar
-        data={chartData}
-        options={options}
-      />
+      <div className='chart'>
+        <Bar data={chartData} options={options} />
+      </div>
     </div>
   );
 };
