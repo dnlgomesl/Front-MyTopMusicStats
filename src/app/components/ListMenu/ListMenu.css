@@ -1,7 +1,25 @@
-.container-list span{
+.toggle-menu{
     color: whitesmoke;
+    padding: 0.4rem;
+    border: 1px solid #76b861;
+    text-align: center;
+
 }
-.container-list {
-    border: 1px solid #76b861
-    ;
+.toggle-label{
+    padding-bottom: 0.3rem;
+}
+.toggle-header{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.toggle-header:hover{
+    cursor:pointer;
+    background-color: #4d4e4d;
+}
+.toggle-option:hover{
+    cursor: pointer;
+    background-color: #4d4e4d;
+}
+.toggle-option{
+    padding: 0.2rem;
 }

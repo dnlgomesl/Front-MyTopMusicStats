@@ -16,6 +16,7 @@ function App() {
   return(
     <TokenContext.Provider value={{token, setToken}}>
       <Login />
+      <TripleListMenu/>
     </TokenContext.Provider>
   )
 }
