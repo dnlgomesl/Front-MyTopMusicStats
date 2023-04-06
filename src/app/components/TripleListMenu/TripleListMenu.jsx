@@ -1,8 +1,11 @@
 import * as React from 'react';
 import ListMenu from '../ListMenu/ListMenu';
+import TypeContext from '../../contexts/Type';
 import './TripleListMenu.css'
 
 function TripleListMenu(){
+    const {type, setType} = React.useContext(TypeContext)
+
     const optionsTime = [
         '',
         'Short',
