@@ -1,0 +1,25 @@
+*{
+  background-color: #202120;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+}
+.login a {
+    color: whitesmoke;
+    font-size: 36px;
+    margin-top: 15rem;
+}
+.logout{
+    float: right;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 2rem;
+}
+.logout button{
+    color: #202120;
+    padding: 0.3rem;
+    background-color: #76b861;
+    border-radius: 3px;
+}
