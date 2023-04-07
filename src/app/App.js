@@ -16,7 +16,13 @@ function App() {
   return(
     <TokenContext.Provider value={{token, setToken}}>
       <Login />
-      <TripleListMenu/>
+      <TypeContext.Provider value={{type, setType}}>
+      <LimitContext.Provider value={{limit, setLimit}}>
+      <RangeContext.Provider value={{range, setRange}}>
+        <TripleListMenu/>
+      </RangeContext.Provider>
+      </LimitContext.Provider>
+      </TypeContext.Provider>  
     </TokenContext.Provider>
   )
 }
