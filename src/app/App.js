@@ -6,6 +6,7 @@ import TokenContext from "./contexts/Token";
 import TypeContext from "./contexts/Type";
 import LimitContext from "./contexts/Limit";
 import RangeContext from "./contexts/Range";
+import Tracks from "./views/TracksView/Tracks";
 
 function App() {
   const [token, setToken] = useState({})
@@ -17,11 +18,12 @@ function App() {
     <TokenContext.Provider value={{token, setToken}}>
       <Login />
       <TypeContext.Provider value={{type, setType}}>
-      <LimitContext.Provider value={{limit, setLimit}}>
-      <RangeContext.Provider value={{range, setRange}}>
-        <TripleListMenu/>
-      </RangeContext.Provider>
-      </LimitContext.Provider>
+        <LimitContext.Provider value={{limit, setLimit}}>
+          <RangeContext.Provider value={{range, setRange}}>
+            <TripleListMenu />
+            <Tracks />
+          </RangeContext.Provider>
+        </LimitContext.Provider>
       </TypeContext.Provider>  
     </TokenContext.Provider>
   )

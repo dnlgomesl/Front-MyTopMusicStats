@@ -35,13 +35,13 @@ function TripleListMenu(){
             <div>
                 <div className='menu'>
                     <TypeContext.Provider value={{type, setType}}>
-                    <LimitContext.Provider value={{limit, setLimit}}>
-                    <RangeContext.Provider value={{range, setRange}}>
-                        <ListMenu options={optionsTime} label={'Time Range'} />
-                        <ListMenu options={optionsLimit} label={'Limt'} />
-                        <ListMenu options={tracksOrArtists} label={'Tipo'} />
-                    </RangeContext.Provider>
-                    </LimitContext.Provider>
+                        <LimitContext.Provider value={{limit, setLimit}}>
+                            <RangeContext.Provider value={{range, setRange}}>
+                                <ListMenu options={optionsTime} label={'Time Range'} />
+                                <ListMenu options={optionsLimit} label={'Limit'} />
+                                <ListMenu options={tracksOrArtists} label={'Tipo'} />
+                            </RangeContext.Provider>
+                        </LimitContext.Provider>
                     </TypeContext.Provider>  
                 </div>
             </div>

@@ -1,4 +1,4 @@
-import {useState, useContext} from 'react';
+import {useState, useContext, useEffect} from 'react';
 import TypeContext from '../../contexts/Type';
 import RangeContext from '../../contexts/Range';
 import LimitContext from '../../contexts/Limit';
