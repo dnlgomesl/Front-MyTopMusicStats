@@ -8,7 +8,7 @@ import RangeContext from "../../contexts/Range";
 import './TripleListMenu.css'
 
 function TripleListMenu(){
-    const {token, setToken} = useContext(TokenContext)
+    const {token, setToken} = useContext(TokenContext);
     const {range, setRange} = useContext(RangeContext);
     const {limit, setLimit} = useContext(LimitContext);
     const {type, setType} = useContext(TypeContext);

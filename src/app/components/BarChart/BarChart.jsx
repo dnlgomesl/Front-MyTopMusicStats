@@ -27,6 +27,8 @@ const BarChart = ({ data, title }) => {
   const chartData = generateChartData(data);
 
   const options = {
+    responsive: true,
+    maintainAspectRatio: false,
     indexAxis: 'y',
     scales: {
       x: {

@@ -12,7 +12,7 @@ const Tracks = () => {
     const {limit, setLimit} = useContext(LimitContext);
     const {type, setType} = useContext(TypeContext);
 
-    if (!!token && typeof limit == "string" && typeof range == "string" && type == 'Músicas') {
+    if (token && typeof limit == "string" && typeof range == "string" && type == 'Músicas') {
         return <TracksView />
     }
 }

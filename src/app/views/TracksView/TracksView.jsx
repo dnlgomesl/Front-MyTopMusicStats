@@ -1,6 +1,5 @@
 import {useContext, useEffect, useState} from "react";
 import TokenContext from "../../contexts/Token";
-import TypeContext from "../../contexts/Type";
 import LimitContext from "../../contexts/Limit";
 import RangeContext from "../../contexts/Range";
 
@@ -24,10 +23,9 @@ function TracksView(){
             "Medium":"medium_term",
             "Long": "long_term",
         }
-        
+
         const getData = async () => {
-            let payload = {"token" : token, "range" : mapper[range], "limit" : limit}
-            const data = await getTopTracks(payload)
+            const data = await getTopTracks({"token" : token, "range" : mapper[range], "limit" : limit})
             setTracks(data)
         }
         

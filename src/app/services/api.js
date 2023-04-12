@@ -11,10 +11,10 @@ export const status = async () => {
 
 export const getTopTracks = async (data) => {
     const response = api.post('/tracks/', data);
-    return response.data
+    return (await response).data
 }
 
 export const getTopArtists = async (data) => {
     const response = api.post('/artists/', data);
-    return response.data
+    return (await response).data
 }
