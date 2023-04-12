@@ -26,24 +26,14 @@ function Login() {
 
     }, [])
 
-    const logout = () => {
-        setToken("")
-        window.localStorage.removeItem("token")
-    }
-    
-    let loginClass = 'logout'
     if (!token) {
-        loginClass = 'login'
+        return (
+            <div className='login'>
+                    <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${SCOPES.join("%20")}&response_type=${RESPONSE_TYPE}`}>Login
+                        to Spotify</a>
+            </div>
+        );
     }
-
-    return (
-        <div className={loginClass}>
-            {!token ?
-                <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${SCOPES.join("%20")}&response_type=${RESPONSE_TYPE}`}>Login
-                    to Spotify</a>
-                : <button onClick={logout}>Logout</button>}
-        </div>
-    );
 }
 
 export default Login;

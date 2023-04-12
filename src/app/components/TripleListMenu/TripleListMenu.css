@@ -1,4 +1,8 @@
 .menu {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+}
+.menu button{
+    color: #202120;
+    background-color: #76b861;
 }

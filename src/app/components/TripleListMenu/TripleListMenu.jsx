@@ -29,6 +29,11 @@ function TripleListMenu(){
         'Artistas',
         'Músicas'
     ]
+
+    const logout = () => {
+        setToken("")
+        window.localStorage.removeItem("token")
+    }
     
     if(!!token){
         return (
@@ -40,6 +45,7 @@ function TripleListMenu(){
                                 <ListMenu options={optionsTime} label={'Time Range'} />
                                 <ListMenu options={optionsLimit} label={'Limit'} />
                                 <ListMenu options={tracksOrArtists} label={'Tipo'} />
+                                <button onClick={logout}>Logout</button>
                             </RangeContext.Provider>
                         </LimitContext.Provider>
                     </TypeContext.Provider>  
