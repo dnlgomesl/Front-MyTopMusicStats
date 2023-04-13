@@ -41,3 +41,13 @@
     margin-right: 1rem;
     color: whitesmoke;
   }
+
+  .url {
+    display: flex;
+    justify-content: right;
+  }
+
+  .infos a {
+    margin-right: 1rem;
+    color: whitesmoke;
+  }

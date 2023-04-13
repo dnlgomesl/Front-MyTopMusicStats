@@ -14,6 +14,9 @@ function TrackList({tracks}) {
               <p>Álbum: {track.album}</p>
               <p>Duração: {track.duration}</p>
               <p>Popularidade: {track.popularity}</p>
+              <div className='url'>
+                <a href={track.url}>Link to Spotify</a>
+              </div>
             </div>
             <img src={track.images[1].url} alt='track' />
           </div>

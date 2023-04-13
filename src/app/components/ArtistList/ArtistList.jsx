@@ -12,6 +12,9 @@ function ArtistList({artists}) {
               <p>Artista: {artist.artist}</p>
               <p>Gêneros: {artist.genres.join(", ")}</p>
               <p>Popularidade: {artist.popularity}</p>
+              <div className='url'>
+                <a href={artist.url}>Link to Spotify</a>
+              </div>
             </div>
             <img src={artist.images[1].url} alt='track' />
           </div>
