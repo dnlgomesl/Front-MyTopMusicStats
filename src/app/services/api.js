@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: 'http://localhost:80',
+  baseURL: 'https://52.15.75.92.nip.io/',
 });
 
 export const status = async () => {
