@@ -45,7 +45,11 @@ function TripleListMenu(){
                                 <ListMenu options={optionsTime} label={'Time Range'} />
                                 <ListMenu options={optionsLimit} label={'Limit'} />
                                 <ListMenu options={tracksOrArtists} label={'Tipo'} />
-                                <button onClick={logout}>Logout</button>
+                                <div className='btns'>
+                                    <a href="https://www.spotify.com/logout/" target="_blank" rel="noopener noreferrer">
+                                        <button className='btn' onClick={logout}>Logout</button>
+                                    </a>
+                                </div>
                             </RangeContext.Provider>
                         </LimitContext.Provider>
                     </TypeContext.Provider>  
