@@ -1,10 +1,6 @@
-import {useEffect, useContext} from "react";
+import {useContext} from "react";
 import TokenContext from "../../contexts/Token";
-import { Buffer } from 'buffer'
-import axios from 'axios';
 import './Logout.css'
-
-window.Buffer = Buffer;
 
 function Logout() {
     const {token, setToken} = useContext(TokenContext)
