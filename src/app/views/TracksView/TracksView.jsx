@@ -31,7 +31,7 @@ function TracksView(){
         
         getData()
 
-    }, [])
+    }, [range, limit])
 
 
     if (tracks){

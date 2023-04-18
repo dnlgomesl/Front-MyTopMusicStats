@@ -31,7 +31,7 @@ function ArtistsView(){
         
         getData()
 
-    }, [])
+    }, [range, limit])
 
     if (artists) {
         return (
