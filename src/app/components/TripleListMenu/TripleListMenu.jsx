@@ -4,6 +4,7 @@ import TokenContext from '../../contexts/Token';
 import TypeContext from "../../contexts/Type";
 import LimitContext from "../../contexts/Limit";
 import RangeContext from "../../contexts/Range";
+import Logout from '../Logout/Logout';
 
 import './TripleListMenu.css'
 
@@ -29,13 +30,8 @@ function TripleListMenu(){
         'Artistas',
         'Músicas'
     ]
-
-    const logout = () => {
-        setToken("")
-        window.localStorage.removeItem("token")
-    }
     
-    if(!!token){
+    if(token){
         return (
             <div>
                 <div className='menu'>
@@ -45,11 +41,7 @@ function TripleListMenu(){
                                 <ListMenu options={optionsTime} label={'Time Range'} />
                                 <ListMenu options={optionsLimit} label={'Limit'} />
                                 <ListMenu options={tracksOrArtists} label={'Tipo'} />
-                                <div className='btns'>
-                                    <a href="https://www.spotify.com/logout/" target="_blank" rel="noopener noreferrer">
-                                        <button className='btn' onClick={logout}>Logout</button>
-                                    </a>
-                                </div>
+                                <Logout />
                             </RangeContext.Provider>
                         </LimitContext.Provider>
                     </TypeContext.Provider>  
