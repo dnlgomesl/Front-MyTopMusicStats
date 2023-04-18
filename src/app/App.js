@@ -12,7 +12,7 @@ import Artists from "./views/ArtistsView/Artists";
 
 
 function App() {
-  const [token, setToken] = useState({})
+  const [token, setToken] = useState(null)
   const [limit, setLimit] = useState({})
   const [range, setRange] = useState({})
   const [type, setType] = useState({})

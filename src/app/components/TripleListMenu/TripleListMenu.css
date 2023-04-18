@@ -2,9 +2,3 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
-.btn{
-    color: #202120;
-    background-color: #76b861;
-    width: 100%;
-    height: 100%;
-}
