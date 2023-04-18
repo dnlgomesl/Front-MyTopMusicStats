@@ -4,7 +4,7 @@ import "./Login.css";
 
 function Login() {
     const CLIENT_ID='d883dc40f4d840efa20f6b4b21eb3cd1'
-    const REDIRECT_URI='https://my-dashboard-to-spotify.vercel.app'
+    const REDIRECT_URI='https://my-top-spotify-stats.vercel.app/'
     const AUTH_ENDPOINT='https://accounts.spotify.com/authorize'
     const RESPONSE_TYPE='token'
     const SCOPES=['user-top-read']
