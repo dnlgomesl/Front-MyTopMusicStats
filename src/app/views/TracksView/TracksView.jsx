@@ -2,6 +2,7 @@ import {useContext, useEffect, useState} from "react";
 import TokenContext from "../../contexts/Token";
 import LimitContext from "../../contexts/Limit";
 import RangeContext from "../../contexts/Range";
+import OrderContext from "../../contexts/Order";
 
 import {getTopTracks} from "../../services/api";
 
@@ -11,9 +12,10 @@ import BasicTable from "../../components/BasicTable/BasicTable";
 import "./TracksView.css";
 
 function TracksView(){
-    const {token, setToken} = useContext(TokenContext)
+    const {token, setToken} = useContext(TokenContext);
     const {range, setRange} = useContext(RangeContext);
     const {limit, setLimit} = useContext(LimitContext);
+    const {order, setOrder} = useContext(OrderContext);
     const [tracks, setTracks] = useState(null)
 
             
@@ -22,16 +24,19 @@ function TracksView(){
             "Short":"short_term",
             "Medium":"medium_term",
             "Long": "long_term",
+            "Padrão": "padrao",
+            "Popularidade": "popularity",
+            "Duração": "duration"
         }
 
         const getData = async () => {
-            const data = await getTopTracks({"token" : token, "range" : mapper[range], "limit" : limit})
+            const data = await getTopTracks({"token" : token, "range" : mapper[range], "limit" : limit, "sort": mapper[order]})
             setTracks(data)
         }
         
         getData()
 
-    }, [range, limit])
+    }, [range, limit, order])
 
 
     if (tracks){

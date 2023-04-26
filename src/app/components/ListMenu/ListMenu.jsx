@@ -2,6 +2,7 @@ import {useState, useContext, useEffect} from 'react';
 import TypeContext from '../../contexts/Type';
 import RangeContext from '../../contexts/Range';
 import LimitContext from '../../contexts/Limit';
+import OrderContext from '../../contexts/Order';
 
 import "./ListMenu.css"
 
@@ -11,6 +12,7 @@ function ListMenu({options, label}) {
   const {range, setRange} = useContext(RangeContext);
   const {limit, setLimit} = useContext(LimitContext);
   const {type, setType} = useContext(TypeContext);
+  const {order, setOrder} = useContext(OrderContext);
 
 
   const toggleMenu = () => {
@@ -27,6 +29,9 @@ function ListMenu({options, label}) {
     }
     if (label == 'Tipo'){
       setType(option)
+    }
+    if (label == 'Tipo de ordenação'){
+      setOrder(option)
     }
     setIsOpen(false);
   };
