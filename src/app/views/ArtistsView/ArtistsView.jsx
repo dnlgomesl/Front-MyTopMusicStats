@@ -2,6 +2,7 @@ import {useContext, useEffect, useState} from "react";
 import TokenContext from "../../contexts/Token";
 import LimitContext from "../../contexts/Limit";
 import RangeContext from "../../contexts/Range";
+import OrderContext from "../../contexts/Order";
 
 import {getTopArtists} from "../../services/api";
 
@@ -11,9 +12,10 @@ import BasicTable from '../../components/BasicTable/BasicTable'
 import './ArtistsView.css'
 
 function ArtistsView(){
-    const {token, setToken} = useContext(TokenContext)
+    const {token, setToken} = useContext(TokenContext);
     const {range, setRange} = useContext(RangeContext);
     const {limit, setLimit} = useContext(LimitContext);
+    const {order, setOrder} = useContext(OrderContext);
     const [artists, setArtists] = useState(null)
 
             
@@ -22,16 +24,19 @@ function ArtistsView(){
             "Short":"short_term",
             "Medium":"medium_term",
             "Long": "long_term",
+            "Padrão": "padrao",
+            "Popularidade": "popularity",
+            "Duração": "duration"
         }
 
         const getData = async () => {
-            const data = await getTopArtists({"token" : token, "range" : mapper[range], "limit" : limit})
+            const data = await getTopArtists({"token" : token, "range" : mapper[range], "limit" : limit, "sort" : mapper[order]})
             setArtists(data)
         }
         
         getData()
 
-    }, [range, limit])
+    }, [range, limit, order])
 
     if (artists) {
         return (
