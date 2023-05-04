@@ -9,6 +9,7 @@ import {getTopTracks} from "../../services/api";
 import TrackList from "../../components/TrackList/TrackList";
 import BarChart from "../../components/BarChart/BarChart";
 import BasicTable from "../../components/BasicTable/BasicTable";
+import PieChart from "../../components/PieChart/PieChart";
 import "./TracksView.css";
 
 function TracksView(){
@@ -47,13 +48,14 @@ function TracksView(){
                     <TrackList tracks={tracks.top} />
                 </div>
                 <div className='basic-table'>
-                    <BasicTable data={tracks.additional.popularity} label={"Esses são os dados referente a populariade das músicas mais ouvidas por você"}/>
+                    <BasicTable data={tracks.additional.popularity} label={"Esses são os dados referente a popularidade das músicas mais ouvidas por você"}/>
                 </div>
-                <BarChart data={tracks.additional.artists} title={"Esses são os artistas presente nas suas músicas mais ouvidas por você"}/>
+                <BarChart data={tracks.additional.artists} title={"Esses são os artistas presente nas músicas mais ouvidas por você"}/>
                 <div className='basic-table'>
                     <BasicTable data={tracks.additional.duration} label={"Esses são os dados referente duração (em minutos) das músicas mais ouvidas por você"}/>
                 </div>
-                <BarChart data={tracks.additional.albuns} title={"Esses são os albuns presente nas suas músicas mais ouvidas por você"}/>
+                <BarChart data={tracks.additional.albuns} title={"Esses são os albuns presente nas músicas mais ouvidas por você"}/>
+                <PieChart data={tracks.additional.decades.count} title={"Essas são as décadas presente nas músicas mais ouvidas por você"}/>
             </div>
 
         );

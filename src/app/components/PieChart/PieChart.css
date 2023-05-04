@@ -1,0 +1,16 @@
+.pie-container {
+    background-color: #202120;
+    text-align: center;
+}
+
+.pie-container h2 {
+    margin: 0 auto;
+    color: whitesmoke;
+    padding: 1rem;
+}
+
+.pie {
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+}
