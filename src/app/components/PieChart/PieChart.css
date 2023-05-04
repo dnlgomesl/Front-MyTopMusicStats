@@ -10,6 +10,8 @@
 }
 
 .pie {
+    max-width: 100%;
+    max-height: 100%;
     width: 800px;
     height: 800px;
     margin: 0 auto;

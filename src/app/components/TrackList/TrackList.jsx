@@ -1,6 +1,6 @@
 import React from 'react';
-import './TrackList.css'; // importando arquivo de estilos
-import logos from '../../static/Spotify_Logo_CMYK_White.png'
+import "../Util/ItemList.css";
+import logos from '../../static/Spotify_Logo_CMYK_White.png';
 
 
 function TrackList({tracks}) {
