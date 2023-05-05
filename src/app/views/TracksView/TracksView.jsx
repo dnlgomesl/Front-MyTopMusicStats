@@ -10,6 +10,7 @@ import TrackList from "../../components/TrackList/TrackList";
 import BarChart from "../../components/BarChart/BarChart";
 import BasicTable from "../../components/BasicTable/BasicTable";
 import PieChart from "../../components/PieChart/PieChart";
+import LineChart from "../../components/LineChart/LineChart";
 import "./TracksView.css";
 
 function TracksView(){
@@ -56,6 +57,7 @@ function TracksView(){
                 </div>
                 <BarChart data={tracks.additional.albuns} title={"Esses são os albuns presente nas músicas mais ouvidas por você"}/>
                 <PieChart data={tracks.additional.decades.count} title={"Essas são as décadas presente nas músicas mais ouvidas por você"}/>
+                <LineChart data={tracks.additional.decades.popularity} title={"Esses são as médias, modas e medianas da popularidade das músicas de acordo com a década"} />
             </div>
 
         );
