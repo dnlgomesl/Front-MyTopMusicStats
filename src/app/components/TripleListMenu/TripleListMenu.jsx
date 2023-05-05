@@ -18,9 +18,9 @@ function TripleListMenu(){
     const [orderOptions, setOrderOptions] = useState(["Padrão"])
 
     const optionsTime = [
-        'Short',
-        'Medium',
-        'Long',
+        'Últimas 4 semanas',
+        'Últimos 6 meses',
+        'Todos os tempos',
     ]
 
     const optionsLimit = [
@@ -58,9 +58,9 @@ function TripleListMenu(){
                         <TypeContext.Provider value={{type, setType}}>
                             <LimitContext.Provider value={{limit, setLimit}}>
                                 <RangeContext.Provider value={{range, setRange}}>
-                                    <ListMenu options={optionsTime} label={'Time Range'} />
-                                    <ListMenu options={optionsLimit} label={'Limit'} />
-                                    <ListMenu options={tracksOrArtists} label={'Tipo'} />
+                                    <ListMenu options={optionsTime} label={'Intervalo de tempo'} />
+                                    <ListMenu options={optionsLimit} label={'Quantidade de item'} />
+                                    <ListMenu options={tracksOrArtists} label={'Tipo do item'} />
                                     <ListMenu options={orderOptions} label={'Tipo de ordenação'} />
                                     <Logout />
                                 </RangeContext.Provider>
