@@ -21,9 +21,9 @@ function ArtistsView(){
             
     useEffect(() => {
         const mapper = {
-            "Short":"short_term",
-            "Medium":"medium_term",
-            "Long": "long_term",
+            "Últimas 4 semanas":"short_term",
+            "Últimos 6 meses":"medium_term",
+            "Todos os tempos": "long_term",
             "Padrão": "padrao",
             "Popularidade": "popularity",
             "Duração": "duration"

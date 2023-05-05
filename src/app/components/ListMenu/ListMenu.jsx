@@ -21,13 +21,13 @@ function ListMenu({options, label}) {
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
-    if (label == 'Time Range'){
+    if (label == 'Intervalo de tempo'){
       setRange(option)
     }
-    if (label == 'Limit'){
+    if (label == 'Quantidade de item'){
       setLimit(option)
     }
-    if (label == 'Tipo'){
+    if (label == 'Tipo do item'){
       setType(option)
     }
     if (label == 'Tipo de ordenação'){
