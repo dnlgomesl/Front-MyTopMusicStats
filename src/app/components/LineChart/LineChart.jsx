@@ -21,7 +21,7 @@ const generateChartData = (data) => {
         datasets: [
             {
                 label: 'Média',
-                data: median,
+                data: mean,
                 fill: false,
                 borderColor: 'rgba(252, 253, 255, 0.4)',
                 tension: 0.1
