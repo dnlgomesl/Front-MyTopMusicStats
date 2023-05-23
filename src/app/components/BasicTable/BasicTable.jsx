@@ -5,7 +5,7 @@ function BasicTable({data, label, textTooltip, element}) {
   return (
     <div className="table">
       <h2><a className={element}>{label}</a></h2>
-      <Tooltip anchorSelect={"." + element} place="top">
+      <Tooltip anchorSelect={"." + element} place="top" className="custom-tooltip">
         {textTooltip}
       </Tooltip>
       <div className='boxes'>
