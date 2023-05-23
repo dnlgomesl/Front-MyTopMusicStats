@@ -6,10 +6,12 @@ import OrderContext from "../../contexts/Order";
 
 import {getTopArtists} from "../../services/api";
 
-import ArtistList from '../../components/ArtistList/ArtistList'
-import BarChart from '../../components/BarChart/BarChart'
-import BasicTable from '../../components/BasicTable/BasicTable'
-import './ArtistsView.css'
+import ArtistList from "../../components/ArtistList/ArtistList";
+import BarChart from "../../components/BarChart/BarChart";
+import BasicTable from "../../components/BasicTable/BasicTable";
+import Loading from "../../components/Loading/Loading";
+
+import "./ArtistsView.css";
 
 function ArtistsView(){
     const {token, setToken} = useContext(TokenContext);
@@ -29,6 +31,8 @@ function ArtistsView(){
             "Duração": "duration"
         }
 
+        setArtists(null)
+
         const getData = async () => {
             const data = await getTopArtists({"token" : token, "range" : mapper[range], "limit" : limit, "sort" : mapper[order]})
             setArtists(data)
@@ -38,7 +42,11 @@ function ArtistsView(){
 
     }, [range, limit, order])
 
-    if (artists) {
+    if (artists == null) {
+        return (
+            <Loading />
+        );
+    } else {
         return (
             <div className='main'>
                 <div className='artist-list'>

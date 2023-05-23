@@ -11,6 +11,8 @@ import BarChart from "../../components/BarChart/BarChart";
 import BasicTable from "../../components/BasicTable/BasicTable";
 import PieChart from "../../components/PieChart/PieChart";
 import LineChart from "../../components/LineChart/LineChart";
+import Loading from "../../components/Loading/Loading";
+
 import "./TracksView.css";
 
 function TracksView(){
@@ -31,6 +33,8 @@ function TracksView(){
             "Duração": "duration"
         }
 
+        setTracks(null);
+
         const getData = async () => {
             const data = await getTopTracks({"token" : token, "range" : mapper[range], "limit" : limit, "sort": mapper[order]})
             setTracks(data)
@@ -40,8 +44,11 @@ function TracksView(){
 
     }, [range, limit, order])
 
-
-    if (tracks){
+    if (tracks == null) {
+        return (
+            <Loading />
+        );
+    } else {
         return (
             <div className='main'>
                 <div className='tracks-list'>
