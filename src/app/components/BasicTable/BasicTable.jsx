@@ -1,9 +1,13 @@
+import { Tooltip } from 'react-tooltip'
 import './BasicTable.css'
 
-function BasicTable({data, label}) {
+function BasicTable({data, label, textTooltip, element}) {
   return (
     <div className="table">
-      <h2>{label}</h2>
+      <h2><a className={element}>{label}</a></h2>
+      <Tooltip anchorSelect={"." + element} place="top" className="custom-tooltip">
+        {textTooltip}
+      </Tooltip>
       <div className='boxes'>
         <div className="box">
           <div className="label">Média: </div>
