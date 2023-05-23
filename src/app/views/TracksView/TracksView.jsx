@@ -56,15 +56,25 @@ function TracksView(){
                     <TrackList tracks={tracks.top} />
                 </div>
                 <div className='basic-table'>
-                    <BasicTable data={tracks.additional.popularity} label={"Esses são os dados referente a popularidade das músicas mais ouvidas por você"}/>
+                    <BasicTable data={tracks.additional.popularity} 
+                    label={"Esses são os dados referente a popularidade das músicas mais ouvidas por você"}
+                    textTooltip={'A popularidade vai de 0 a 100. Os seguintes dados mostram, em geral, como suas músicas são populares.'}
+                    element={'track-pop'}/>
                 </div>
-                <BarChart data={tracks.additional.artists} title={"Esses são os artistas presente nas músicas mais ouvidas por você"}/>
+                <BarChart data={tracks.additional.artists} 
+                title={"Esses são os artistas presente nas músicas mais ouvidas por você"}/>
                 <div className='basic-table'>
-                    <BasicTable data={tracks.additional.duration} label={"Esses são os dados referente duração (em minutos) das músicas mais ouvidas por você"}/>
+                    <BasicTable data={tracks.additional.duration} 
+                    label={"Esses são os dados referente duração (em minutos) das músicas mais ouvidas por você"}
+                    textTooltip={'Os seguintes dados mostram, em geral, qual a duração das músicas mais ouvidas por você.'}
+                    element={'track-dur'}/>
                 </div>
-                <BarChart data={tracks.additional.albuns} title={"Esses são os albuns presente nas músicas mais ouvidas por você"}/>
-                <PieChart data={tracks.additional.decades.count} title={"Essas são as décadas presente nas músicas mais ouvidas por você"}/>
-                <LineChart data={tracks.additional.decades.popularity} title={"Esses são as médias, modas e medianas da popularidade das músicas de acordo com a década"} />
+                <BarChart data={tracks.additional.albuns} 
+                title={"Esses são os albuns presente nas músicas mais ouvidas por você"}/>
+                <PieChart data={tracks.additional.decades.count} 
+                title={"Essas são as décadas presente nas músicas mais ouvidas por você"}/>
+                <LineChart data={tracks.additional.decades.popularity} 
+                title={"Esses são as médias, modas e medianas da popularidade das músicas de acordo com a década"} />
             </div>
 
         );

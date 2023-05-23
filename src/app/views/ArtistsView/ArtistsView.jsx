@@ -54,7 +54,9 @@ function ArtistsView(){
                     <ArtistList artists={artists.top} />
                 </div>
                 <div className='basic-table'>
-                    <BasicTable data={artists.additional.popularity} label={"Esses são os dados referentes a populariade dos artistas mais ouvidos por você"}/>
+                    <BasicTable data={artists.additional.popularity} label={"Esses são os dados referentes a populariade dos artistas mais ouvidos por você"}
+                    textTooltip={'A popularidade vai de 0 a 100. Os seguintes dados mostram, em geral, como seus artista são populares.'}
+                    element={'track-pop'}/>
                 </div>
                 <BarChart data={artists.additional.genres} title={"Esses são os gêneros musicais presentes nos seus artistas mais ouvidos por você"}/>
             </div>
