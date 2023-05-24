@@ -23,7 +23,7 @@ const generateChartData = (data) => {
   };
 };
 
-const BarChart = ({ data, title }) => {
+const BarChart = ({ data, title, desc }) => {
   const chartData = generateChartData(data);
 
   const options = {
@@ -52,6 +52,7 @@ const BarChart = ({ data, title }) => {
   return (
     <div className="chart-container">
       <h2>{title}</h2>
+      <p>{desc}</p>
       <div className='chart'>
         <Bar data={chartData} options={options} />
       </div>
