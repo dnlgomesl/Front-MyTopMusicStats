@@ -9,6 +9,12 @@
     padding: 1rem;
 }
 
+.chart-container p {
+    margin: 0 auto;
+    color: whitesmoke;
+    padding: 1rem;
+}
+
 .chart {
     max-width: 100%;
     max-height: 100%;

@@ -58,7 +58,9 @@ function ArtistsView(){
                     textTooltip={'A popularidade vai de 0 a 100. Os seguintes dados mostram, em geral, como seus artista são populares.'}
                     element={'track-pop'}/>
                 </div>
-                <BarChart data={artists.additional.genres} title={"Esses são os gêneros musicais presentes nos seus artistas mais ouvidos por você"}/>
+                <BarChart data={artists.additional.genres} 
+                title={"Esses são os gêneros musicais presentes nos seus artistas mais ouvidos por você."}
+                desc={"Foi feito uma contagem de quais gêneros estão presentes nesse conjunto de artistas."}/>
             </div>
     
         );
