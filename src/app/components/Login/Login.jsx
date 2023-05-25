@@ -28,10 +28,16 @@ function Login() {
 
     if (!token) {
         return (
-            <div className='login'>
+            <div className="main-login">
+                <div className="info-login">
+                    <p>O My Top Music Stats é um projeto de Trabalho de Conclusão de Curso que visa dar mostrar para você que usa o Spotify um pequeno dashboard com informações referente ao que esse você vem escutando.</p>
+                </div>
+                <div className='login'>
                     <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${SCOPES.join("%20")}&response_type=${RESPONSE_TYPE}&show_dialog=${true}`}>Login
                         to Spotify</a>
+                </div>
             </div>
+
         );
     }
 }

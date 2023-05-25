@@ -5,9 +5,20 @@
 .login {
     display: flex;
     justify-content: center;
+    margin-top: 1rem;
 }
 .login a {
     color: whitesmoke;
     font-size: 36px;
-    margin-top: 15rem;
+}
+.info-login p {
+  color: whitesmoke;
+  font-size: 26px;
+  text-align: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.main-login {
+  margin-top: 15rem;
 }
