@@ -40,3 +40,5 @@ http://localhost:3000
 ```
 É interessante lembrar que você precisa alerar no componente de login a `REDIRECT_URI` para http://localhost:3000.
 Agora você pode explorar e interagir com a aplicação React localmente!
+
+Link para API: https://github.com/dnlgomesl/API-MyTopMusicStats
